@@ -8,7 +8,12 @@ Bundler.require(*Rails.groups)
 
 module Frenchies
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
+
+      Giphy::Configuration.configure do |config|
+            config.version = '0.1'
+              config.api_key = 'dc6zaTOxFJmzC'
+      end
+      # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 

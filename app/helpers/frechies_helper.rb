@@ -1,0 +1,2 @@
+module FrechiesHelper
+end
