@@ -10,7 +10,6 @@ module Frenchies
   class Application < Rails::Application
 
       Giphy::Configuration.configure do |config|
-            config.version = '0.1'
               config.api_key = 'dc6zaTOxFJmzC'
       end
       # Settings in config/environments/* take precedence over those specified here.
