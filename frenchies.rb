@@ -1,10 +1,14 @@
+
+
+gem "giphy", path: "/Users/ricardoparro/.rvm/gems/ruby-2.2.0/bin/giphy"
+
+gem 'telegram-bot-ruby'
 require 'telegram/bot'
+require 'giphy'
 
-class FrenchiesController < ApplicationController
-
-
-
-    def index
+Giphy::Configuration.configure do |config|
+              config.api_key = 'dc6zaTOxFJmzC'
+      end
 
         @frenchies = Giphy.search('french bulldog', {limit: 50, offset: 25})
         token = '109398535:AAFzTWO4AtPAnWOuhRsCN5YlfUavWOBaQ_4'
@@ -20,6 +24,6 @@ class FrenchiesController < ApplicationController
         end
 
 
-    end
 
-end
+
+
